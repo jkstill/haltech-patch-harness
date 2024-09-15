@@ -77,6 +77,8 @@ These pins are used to control the OMP, and not necessary for my use.
 The car has been started, and I verified that oil and fuel pressure were both being logged.
 
 
+Thanks to [Reider357 for providing annotated connector drawings](https://www.rx7club.com/haltech-forum-62/haltech-elite-direct-fire-ait-sensor-1136840/#post12450549), these were very useful.
+
 ## All Images
 
 ![connector-diagram-01.jpg](./connector-diagram-01.jpg)
