@@ -2,15 +2,26 @@
 Haltech Patch Harness Mods
 ==========================
 
-I needed to wire up the Oil and Fuel pressure sensors to the new Haltech 1500 Elite CPU.
+I needed to wire up the following on a new Haltech 1500 Elite CPU:
 
-Rather than run new wires, I used the existing OMP (Oil Metering Pump) connector on the Rywire harness.
+- Oil Pressure Sensor
+- Fuel Pressure Sensor
+- GM Throttle Pedal
+- Bosch 82mm Electric Throttle
 
-Though I don't recall why I ordered the Rywire harness with OMP (no OMP in years), it seemed a good idea to just use the existing OMP wiring for the Oil/Fuel sensors.
+This FD has a 5 year old Rywire Harness, and I didn't want to spend another $1300 or so for a new harness for DBW.
+
+That would have been much easier though.
+
+The Rywire harness had the OMP harness on it. I guess I just forget to order it without the OMP, as this car has been strictly premix for years.
+
+As long as it was there though, the 6 wires in the OMP harness were repurposed for the Fuel/Oil pressure sensors.
 
 While this mod requires some modifications to the Haltech Patch box that fits between the Haltech Patch harness and the RX-7 engine harness, there were no hard modifications to existing harnesses.
 
-That is, no wires were cut, though 4 wires were removed from a connecter, and another was moved from one connector to another.
+That is, no wires were cut.
+
+Between the OMP, the GM Pedal and the Bosch throttle body, a few wires were moved around in the harnesses.
 
 The idea is to use 6 of the existing wires in the OMP wiring to supply +5v and sensor ground to the Oil/Fuel pressure sensors, and to get the signal back from the sensors.
 
@@ -21,10 +32,19 @@ The idea is to use 6 of the existing wires in the OMP wiring to supply +5v and s
 
 ## ECU Signals
 
+The Drive By Wire requires the use of these signals for DBW is _required_ for the Haltech Elite Series.
+
+AVI2: TB TPS1
+AVI3: TB TPS1
+AVI4: Pedal App 1
+AVI5: Pedal App 2
+
+On Nexus ECUs, other AVI signals may be used.
+
 The following ECU signals are used for the oil/fuel pressure signals, and are configured that way in the software.
 
-AVI3: Oil Pressure
-AVI4: Fuel Pressure
+AVI9: Oil Pressure
+AVI10: Fuel Pressure
 
 ## +5V
 
