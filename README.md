@@ -30,6 +30,8 @@ The idea is to use 6 of the existing wires in the OMP wiring to supply +5v and s
 ![Patch Box Connectors](./haltech-adapter-box-mods-04-annotated.png)
 
 
+There are accompanying spreadsheets and photos of notes that provide further details for the wiring and pinning.
+
 ## ECU Signals
 
 The Drive By Wire requires the use of these signals for DBW is _required_ for the Haltech Elite Series.
@@ -62,28 +64,28 @@ This was accomplished by jumpering together pins 17-19 on the 26 pin connector o
 
 ![Sensor Ground Jumpers](./haltech-adapter-box-mods-03.jpg)
 
-## AVI3 - Fuel Pressure
+Please ignore the AVI4 reference in that picture, as it is incorrect.
 
-AVI3 corresponds to A17 on the 34 pin Haltech connector.  This pin is used by default for OMP position.
+## AVI9 - Oil Pressure
 
-As there is no OMP, this wire was traced to the corresponding wire in the OMP connector, and connectedto the Fuel Pressure sensor.
+As the external MAP sensor is not used (internal to ECU), AVI9 was repurposed for the Oil Pressure Sensor.
 
-## AVI4 - Oil Pressure
+## AVI 10 - Fuel Pressure
 
-AVI4 appears in two places in the Haltech adapter box; as pin 11 the 16 pin connector on the Haltech side of the box, and as pin 2 on the 32 pin connector.
-
-There is no wire in the 16 pin patch harness connector at position 11.  
-
-On the adaptor circuit board, pin #7 of the 26 pin connector on the engine harness side was jumpered to pin #1 of 16 pin connector, also on the engine harness side of the box.
-
-![AVi4 Jumper](./haltech-adapter-box-mods-03.jpg)
-
-The wire in the OMP harness that corresponds to the oil pressure sensor wire was removed from the connector (sorry, I forgot to write down which connect/pin that was) and inserted into the pin #7 position of the 26 pin connector on the engine harness side of the box.
+AVI 10 was previously used by the TPS (Throttle Position Sensor), and has been repurposed for the Fuel Pressure Sensor.
 
 
 ## Patch Harness Modifications
 
-The only modification to the Haltech Patch Harness was to remove the pin numbers 29-32 from the 32 pin connector that plugs into the Haltech side of the adapter box.
+No wires were cut in any of the harnesses. Some wires were removed and replaced, a few were moved to different connectors and/or pins.
+
+The Patch Harness box that allows connecting an FD harness to the Haltech ECU does some some modifications.
+
+A few pins were jumpered for +5 and Ground, and I believe AVI4 was jumpered to a different pin.
+
+Details are in the Spreadsheets and photos referenced earlier.
+
+On modification to the Haltech Patch Harness was to remove the pin numbers 29-32 from the 32 pin connector that plugs into the Haltech side of the adapter box.
 
 These are pins 5,6,18 and 19 on the 26 pin connector that plugs into the engine harness side of the adapter box
 
@@ -91,27 +93,41 @@ These pins correspond to pins 31-34 on the 34 pin connector that plugs in to the
 
 These pins are used to control the OMP, and not necessary for my use.
 
-
 ## Results
 
 The car has been started, and I verified that oil and fuel pressure were both being logged.
 
+Getting all the wiring correct for the DBW was quite a chore.
+
+The physical part is not so difficult - the hard part is determining which wires go where, and documenting it.
+
+If I had to do it again, I just might buy another harness that is plug and play.
 
 Thanks to [Reider357 for providing annotated connector drawings](https://www.rx7club.com/haltech-forum-62/haltech-elite-direct-fire-ait-sensor-1136840/#post12450549), these were very useful.
 
+## Excel Files
+
+![RX-7-DBW-Pinouts.xlsx](./RX-7-DBW-Pinouts.xlsx)
+![RX-7-Drive-By-Wire-Parts.xlsx](./RX-7-Drive-By-Wire-Parts.xlsx)
+![RX-7-Haltech-Wiring.xlsx](./RX-7-Haltech-Wiring.xlsx)
+
 ## All Images
 
+![Bosch-82mm-wiring.jpg](./Bosch-82mm-wiring.jpg)
 ![connector-diagram-01.jpg](./connector-diagram-01.jpg)
 ![connector-diagram-02.jpg](./connector-diagram-02.jpg)
 ![connector-diagram-03.jpg](./connector-diagram-03.jpg)
 ![FD-in-garage.jpg](./FD-in-garage.jpg)
 ![FD-in-garage-wide.jpg](./FD-in-garage-wide.jpg)
+![fd-tps-connector-wiring.png](./fd-tps-connector-wiring.png)
+![GM-pedal-22741799-Bosch-82mm-wiring.jpg](./GM-pedal-22741799-Bosch-82mm-wiring.jpg)
+![GM-pedal-22741799-wiring.jpg](./GM-pedal-22741799-wiring.jpg)
 ![haltech-adapter-box-mods-01.jpg](./haltech-adapter-box-mods-01.jpg)
 ![haltech-adapter-box-mods-02.jpg](./haltech-adapter-box-mods-02.jpg)
 ![haltech-adapter-box-mods-03.jpg](./haltech-adapter-box-mods-03.jpg)
-![haltech-adapter-box-mods-04.jpg](./haltech-adapter-box-mods-04.jpg)
-![OMP-Harness-01.jpg](./OMP-Harness-01.jpg)
 ![haltech-adapter-box-mods-04-annotated.png](./haltech-adapter-box-mods-04-annotated.png)
-
-
+![haltech-adapter-box-mods-04.jpg](./haltech-adapter-box-mods-04.jpg)
+![Haltech-DBW-Brake-Fuel-Oil-Repin.jpg](./Haltech-DBW-Brake-Fuel-Oil-Repin.jpg)
+![Haltech-DBW-wiring.jpg](./Haltech-DBW-wiring.jpg)
+![OMP-Harness-01.jpg](./OMP-Harness-01.jpg)
 
